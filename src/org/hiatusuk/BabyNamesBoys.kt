@@ -1,8 +1,8 @@
 package org.hiatusuk
 
 fun main(args: Array<String>) {
-    val foreNames = arrayOf("Rohan","Nathaniel","Anthony/Tony","Chris(topher)","Jonathan","Lemur","Noah","Harry","Percy","Peregrine","James","Jamie","Sidney","Gabriel","Leyton","Curtley","Jarvis");
-    val middleNames = arrayOf("Rohan","Nathaniel","Anthony/Tony","Chris(topher)","Jonathan","Lemur","Noah","Harry","Percy","Peregrine","James","Jamie","Sidney","Gabriel","Leyton","Curtley","Jarvis");
+    val foreNames = arrayOf("Rohan","Nathaniel","Anthony","Chris","Jonathan","Lemur","Harry","Percy","Peregrine","James","Jamie","Sidney","Gabriel","Leyton","Curtley","Jarvis");
+    val middleNames = arrayOf("Rohan","Nathaniel","Tony","Chris","Jonathan","Lemur","Harry","Percy","Peregrine","James","Jamie","Sidney","Gabriel","Leyton","Curtley","Jarvis");
 
     foreNames.sort()
     middleNames.sort()
@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
             if (name1 != name2) {
                 val syllables2 = syllableCount(name2)
 
-                if (name1[0] == name2[0] || (syllables1 == 1 && syllables2 == 1) || (syllables1 == 1 && syllables2 >= 3) || (syllables1 >= 3 && syllables2 >= 3)) {
+                if (name1[0] == name2[0] || (syllables1 == 1 && syllables2 == 1) || (syllables1 == 1 && syllables2 >= 3) || (syllables1 >= 3 && syllables2 >= 3) || (syllables1 >= 3 && syllables2 == 1)) {
                     continue
                 }
 
@@ -35,8 +35,8 @@ fun isVowel(inChar: Char) : Boolean {
 }
 
 fun syllableCount(inStr: String): Int {
-    if (inStr == "Maya") {
-        return 2
+    if (inStr == "Anthony") {
+        return 3
     }
 
     var syllables = 0
