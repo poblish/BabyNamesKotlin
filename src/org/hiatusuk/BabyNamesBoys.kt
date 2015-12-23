@@ -7,10 +7,6 @@ fun main(args: Array<String>) {
     foreNames.sort()
     middleNames.sort()
 
-//    for (eachName in foreNames) {
-//        println(eachName + "has" + syllableCount(eachName) + "syllables")
-//    }
-
     var count = 0
 
     for (name1 in foreNames) {
@@ -33,7 +29,6 @@ fun main(args: Array<String>) {
         }
     }
 }
-
 
 fun isVowel(inChar: Char) : Boolean {
     return (inChar == 'a' || inChar == 'e' || inChar == 'i' || inChar == 'o' || inChar == 'u')
@@ -59,16 +54,13 @@ fun syllableCount(inStr: String): Int {
                 syllables++
                 wasVowel = true
             }
-        } else {
+        }
+        else {
             wasVowel = false
         }
 
         lastChar = c
     }
 
-    if (syllables == 0) {
-        return 1
-    }
-
-    return syllables
+    return if (syllables == 0) 1 else syllables
 }
